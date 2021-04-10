@@ -8,7 +8,7 @@ Min-Ling Zhang and Zhi-Hua Zhou.  Multilabel neural networks withapplications to
 
 ## Description of Methods
 
-* `mistake_size(Y_train_pred, Y_train, t)`: computes to size of <img src="https://render.githubusercontent.com/render/math?math=\widehat{Y}_i \Delta Y_i"> (where <img src="https://render.githubusercontent.com/render/math?math=\Delta"> indicates symmetric difference).    
+* `mistake_size(Y_train_pred, Y_train, t)`: computes the size of <img src="https://render.githubusercontent.com/render/math?math=\widehat{Y}_i \Delta Y_i"> (where <img src="https://render.githubusercontent.com/render/math?math=\Delta"> indicates symmetric difference).    
     Arguments: 
     - Y_train_pred: a vector of predicted label propensities for training instance "i"
     - Y_train: true binary labels for training instance "i"
@@ -23,4 +23,4 @@ Min-Ling Zhang and Zhi-Hua Zhou.  Multilabel neural networks withapplications to
 
 ---
 
-**NOTE:** 'Description of Methods' section is still be completed.
+**NOTE:** 'Description of Methods' section is still being completed.
