@@ -19,3 +19,8 @@ Min-Ling Zhang and Zhi-Hua Zhou.  Multilabel neural networks withapplications to
     - Y_train_pred
     - Y_train
     - t_range: a tuple, defining the lower and upper bound of values of "t" to use in <img src="https://render.githubusercontent.com/render/math?math=\textrm{argmin}_t">
+
+
+---
+
+**NOTE:** 'Description of Methods' section is still be completed.
