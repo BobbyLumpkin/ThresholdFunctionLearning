@@ -65,6 +65,20 @@ def threshold_function_learn(Y_train_pred, Y_train, t_range):
    
     return fit
  
+## Define a function to get binary test label predictions, given a learned threshold function fit and test propensity predictions.
+def predict_labels_binary(Y_pred, threshold_function):
+    # Get the threshold values
+    threshold_vals = threshold_function.predict(Y_pred)
+    Y_pred_binary = 2 * np.ones((Y_pred.shape[0], Y_pred.shape[1]))
+    for i in range(Y_pred.shape[0]):
+        for j in range(Y_pred.shape[1]):
+            if Y_pred[i, j] > threshold_vals[i]:
+                Y_pred_binary[i, j] = 1
+            else:
+                Y_pred_binary[i, j] = 0
+               
+    return Y_pred_binary
+
 ## Define a function to learn threshold function from training labels and return binary test label predictions and the threshold function
 def predict_test_labels_binary(Y_train_pred, Y_train, Y_test_pred, t_range):
     # Get the learned threshold function
@@ -79,17 +93,3 @@ def predict_test_labels_binary(Y_train_pred, Y_train, Y_test_pred, t_range):
                 Y_test_pred_binary[i, j] = 0
    
     return Y_test_pred_binary, fit
- 
-## Define a function to get binary test label predictions, given a learned threshold function fit and test propensity predictions.
-def predict_labels_binary(Y_pred, threshold_function):
-    # Get the threshold values
-    threshold_vals = threshold_function.predict(Y_pred)
-    Y_pred_binary = 2 * np.ones((Y_pred.shape[0], Y_pred.shape[1]))
-    for i in range(Y_pred.shape[0]):
-        for j in range(Y_pred.shape[1]):
-            if Y_pred[i, j] > threshold_vals[i]:
-                Y_pred_binary[i, j] = 1
-            else:
-                Y_pred_binary[i, j] = 0
-               
-    return Y_pred_binary
