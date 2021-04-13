@@ -6,6 +6,12 @@ Min-Ling Zhang and Zhi-Hua Zhou.  Multilabel neural networks withapplications to
 
 ---
 
+## Important Files for Use
+
+1. **threshold_learning.py:** the library for threshold function learning, as desribed in Zhang \& Zhou (2014)
+2. **threshold_learning_demo.ipynb:** a Jupyter notebook written to demonstrate the use and usefulness of the threshold_learning library. Using a multi-lable example from functional genomics, a comparison of two methods using both constant and learned threshold functions is presented.
+---
+
 ## Description of Methods
 
 * `mistake_size(Y_train_pred, Y_train, t)`: computes the size of <img src="https://render.githubusercontent.com/render/math?math=\widehat{Y}_i \Delta Y_i"> (where <img src="https://render.githubusercontent.com/render/math?math=\Delta"> indicates symmetric difference).    
